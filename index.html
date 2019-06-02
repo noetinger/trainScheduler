@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">>
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+    <title>Train Scheduler</title>
+</head>
+
+<body>
+    <main>
+        <!-- Add in Jumbotron Header-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="display-4">Train Scheduler</h1>
+                    <p class="lead">View the Train Schedule below, or add a train to the schedule!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+<!--WHY CANT I GET BORDERS TO WORK? UPDATED BOOTSTRAP LINK????-->
+
+        <!-- Add in Bootstrap Table to push data too-->
+        <div class="row" >
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="card mb-6">
+                    <div class="card-header">Current Train Schedule</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id='train-table'>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Add in row/column -->
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <div class="card mb-6">
+                    <div class="card-header">Add a train</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Train Name</label>
+                                <input type="text" class="form-control" id="train-name-input"
+                                    aria-describedby="emailHelp" placeholder="Enter Train Name here...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Destination</label>
+                                <input type="text" class="form-control" id="dest-input"
+                                    aria-describedby="emailHelp" placeholder="Enter Destination here...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">First Train Time (HH:mm - Military Time)</label>
+                                <input type="text" class="form-control" id="first-train-input"
+                                    aria-describedby="emailHelp" placeholder="Enter time here...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Frequency (min)</label>
+                                <input type="text" class="form-control" id="freq-input"
+                                    aria-describedby="emailHelp" placeholder="Enter Frequency here...">
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary" id="add-train-button">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+        </div>
+    <br>
+    <br>
+
+    </main>
+    <!--Javascript Link-->
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
