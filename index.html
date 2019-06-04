@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,29 +13,27 @@
     <script src=https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.js></script>
     <title>Train Scheduler</title>
 </head>
-
 <body>
     <main>
         <!-- Add in Jumbotron Header-->
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid p-3 mb-2 bg-primary text-white border border-primary">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="display-4">Train Scheduler</h1>
+                    <h1 class="display-4 ">Train Scheduler</h1>
                     <p class="lead">View the Train Schedule below, or add a train to the schedule!
                     </p>
                 </div>
             </div>
         </div>
-
-<!--WHY CANT I GET BORDERS TO WORK? UPDATED BOOTSTRAP LINK????-->
-
+        <br>
+        <br>
         <!-- Add in Bootstrap Table to push data too-->
         <div class="row" >
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
-                <div class="card mb-6">
-                    <div class="card-header">Current Train Schedule</div>
+                <div class="card mb-6 border border-primary">
+                    <div class="card-header p-3 mb-2 bg-primary text-white">Current Train Schedule</div>
                     <div class="card-body">
                         <table class="table table-sm table-hover" id='train-table'>
                             <thead>
@@ -57,18 +54,15 @@
         </div>
         <div class="col-md-1">
         </div>
-
         <br>
         <br>
-        <br>
-
         <!-- Add in row/column -->
         <div class="row">
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
-                <div class="card mb-6">
-                    <div class="card-header">Add a train</div>
+                <div class="card mb-6 border border-primary">
+                    <div class="card-header p-3 mb-2 bg-primary text-white">Add a train</div>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
@@ -94,7 +88,6 @@
                             <div class="text-right">
                                 <button type="submit" class="btn btn-primary" id="add-train-button">Submit</button>
                             </div>
-
                         </form>
                     </div>
                 </div>

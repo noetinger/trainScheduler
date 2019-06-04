@@ -27,8 +27,6 @@ $(document).ready(function () {
         var freq = $("#freq-input").val().trim();
         var firstTrain = $("#first-train-input").val().trim();
 
-        //Add in If/Else statements to make sure input values are correct
-
         //Reference to Firebase
         var trainObj = {
             name: trainName,
@@ -37,6 +35,7 @@ $(document).ready(function () {
             firstTrain: firstTrain,
         }
 
+        //Input validation
         if (
             trainName != "" &&
             dest != "" &&
